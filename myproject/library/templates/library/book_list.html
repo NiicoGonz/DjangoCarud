@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1 class="mt-5 mb-4">Books</h1>
+        {% if books %}
+            <div class="row">
+                {% for book in books %}
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ book.title }}</h5>
+                                <p class="card-text">Author: {{ book.author }}</p>
+                                <a href="{% url 'book_detail' book.pk %}" class="btn btn-primary">View Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div>
+
+            <p>No hay libros.</p>
+            <a href="{% url 'book_create' %}">Add new book</a>
+        </div>
+
+        {% endif %}
+    </div>
+{% endblock %}

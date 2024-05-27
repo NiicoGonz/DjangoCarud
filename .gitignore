@@ -1,0 +1,25 @@
+# Archivos de configuración específicos de tu entorno
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Archivos generados por el sistema operativo
+.DS_Store
+Thumbs.db
+
+# Directorio de archivos estáticos y archivos generados automáticamente
+/staticfiles/
+
+# Directorio de archivos de registro
+/logs/
+
+# Directorio de archivos de datos de la base de datos
+/db.sqlite3
+
+# Archivos de configuración local
+/local_settings.py
+.env
+
+# Carpeta de dependencias de Python
+/venv/

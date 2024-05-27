@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+<h1>Delete Author</h1>
+<p>Are you sure you want to delete "{{ author.name }}"?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Confirm</button>
+</form>
